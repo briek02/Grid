@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="L5LB.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <!-- With a FontSize of 25, Label height is about 34. -->
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid VerticalOptions="FillAndExpand"
+          Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Grid [Lesson #5 - Lab B]"
+               Grid.Column="0"
+               Grid.ColumnSpan="3"
+               Grid.Row="0"
+               FontSize="30"
+               TextColor="Gray"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Label Text="Autosized cell"
+               Grid.Column="0"
+               Grid.Row="1"
+               BackgroundColor="Blue" />
+
+        <BoxView Color="Silver"
+                 Grid.Column="1"
+                 Grid.Row="1"
+                 />
+
+        <Label   Text="Other Empty Space"
+                 BackgroundColor="Teal"
+                 Grid.Column="0"
+                 Grid.Row="2"
+                 VerticalTextAlignment="Center"  />
+
+        <Label Text="Leftover space"
+               Grid.Column="1"
+               Grid.Row="2"
+               BackgroundColor="DarkRed"
+               TextColor="Gray"
+               VerticalTextAlignment="Center" />
+
+        <Label Text="Span two rows (or more if you want)"
+               Grid.Column="2"
+               Grid.Row="1"
+               Grid.RowSpan="2"
+               BackgroundColor="Navy"
+               VerticalTextAlignment="Center" />
+
+        <Label Text="Span 2 columns"
+               Grid.Column="0"
+               Grid.ColumnSpan="1"
+               Grid.Row="3"
+               BackgroundColor="YellowGreen"
+
+               VerticalTextAlignment="Center" />
+
+        <Label Text="Second Leftover Space"
+               Grid.Column="1"
+               Grid.ColumnSpan="1"
+               Grid.Row="3"
+               BackgroundColor="Magenta"
+               VerticalTextAlignment="Center" />
+
+        <Label Text="Fixed 100x100"
+               Grid.Column="2"
+               Grid.Row="3"
+               BackgroundColor="Red"
+               VerticalTextAlignment="Center" />
+    </Grid>
+
+</ContentPage>
